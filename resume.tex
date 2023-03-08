@@ -18,7 +18,6 @@
 \usepackage{etoolbox}
 \robustify\cftdotfill
 
-
 %-----------------------------------------------------------
 %Edit these values as you see fit
 
@@ -57,7 +56,14 @@
 \newcommand{\ressubheading}[4]{
 \begin{tabular*}{6.5in}{l@{\cftdotfill{\cftsecdotsep}\extracolsep{\fill}}r}
 		\textbf{#1} & #2 \\
-		\textit{#3} & \textit{#4} \\
+		\textit{#3} & #4 \\
+\end{tabular*}\vspace{-6pt}}
+\newcommand{\ressubheadinglong}[8]{
+\begin{tabular*}{6.5in}{l@{\cftdotfill{\cftsecdotsep}\extracolsep{\fill}}r}
+		\textbf{#1} & #2 \\
+		\textit{#3} & #4 \\
+		\textit{#5} & #6 \\
+		\textit{#7} & #8 \\
 \end{tabular*}\vspace{-6pt}}
 %-----------------------------------------------------------
 
@@ -86,39 +92,43 @@ Waterloo, Ontario & github.com/godares79 \\
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{itemize}
 \item
-	\ressubheading{Google}{USA/Canada}{Software Engineer}{March 2020 - April 2023}
+	\ressubheading{Google}{USA/Canada}{Software Engineer}{Mar 2020 - Apr 2023}
 	\begin{itemize}
 		\resitem{Item}
 		\resitem{Item}
 	\end{itemize}
 
 \item 
-	\ressubheading{Google}{USA/Japan}{Software Engineer in Test}{January 2014 - March 2020}
+	\ressubheading{Google}{USA/Japan}{Software Engineer, Tools and Infrastructure}{Jan 2014 - Mar 2020}
 	\begin{itemize}
 		\resitem{Item}
 		\resitem{Item}
 	\end{itemize}
 
 \item 
-	\ressubheading{University of Waterloo}{Canada}{Research Assistant}{September 2011 - May 2013}
-	\begin{itemize}
-		\resitem{Item}
-		\resitem{Item}
-	\end{itemize}
+	\ressubheading{University of Waterloo}{Waterloo, ON}{Research Assistant: Formal Methods Lab}{Sept 2011 - May 2013}
+	\ifdefined\longresume
+		\begin{itemize}
+			\resitem{Created and extended modelling languages and model verification tooling in an automotive context.}
+			\resitem{Performed research presentations for industrial partners and visiting researchers.}
+		\end{itemize}
+	\fi
+\item 
+	\ressubheading{University of Alberta}{Edmonton, AB}{Web Developer}{May 2011 - Sept 2011}
+	\ifdefined\longresume
+		\begin{itemize}
+			\resitem{Created web-based info system for storing, editing, and searching faculty profiles at the University of Alberta using PHP, HTML, and JS.}
+		\end{itemize}
+	\fi
 
 \item 
-	\ressubheading{University of Alberta}{Canada}{Web Developer}{May 2011 - September 2011}
-	\begin{itemize}
-		\resitem{Item}
-		\resitem{Item}
-	\end{itemize}
-
-\item 
-	\ressubheading{Energy Navigator Inc.}{Canada}{Junior Software Developer}{May 2009 - August 2010}
-	\begin{itemize}
-		\resitem{Item}
-		\resitem{Item}
-	\end{itemize}
+	\ressubheading{Energy Navigator Inc.}{Calgary, AB}{Junior Software Developer}{May 2009 - Aug 2010}
+	\ifdefined\longresume
+		\begin{itemize}
+			\resitem{Code and tooling for AFE Navigator, an expenditure tracking platform for energy companies.}
+			\resitem{Primarily worked in C\#. Additionally, some VB.NET, Java, and PL/SQL.}
+		\end{itemize}
+	\fi
 
 \end{itemize}
 
@@ -127,44 +137,26 @@ Waterloo, Ontario & github.com/godares79 \\
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{itemize}
 \item
-	\ressubheading{University of Waterloo}{Waterloo, ON}{M.Math Computer Science}{2011 - September 2013}
-	\begin{itemize}
-		\resitem{Add my thesis here}
-		\resitem{GPA...}
-		\resitem{List out publications....}
-	\end{itemize}
+	\ressubheading{University of Waterloo}{Waterloo, ON}{M.Math Computer Science}{2011 - 2013}
+	\ifdefined\longresume
+		\begin{itemize}
+			\resitem{Thesis Topic: A Mode-Based Behaviour Pattern for Feature Requirements, and a Generic Feature Interface}
+			\resitem{GPA: \textbf{89/100}}
+			\resitem{List out publications if they fit...}
+		\end{itemize}
+	\fi
 
 \item
-	\ressubheading{University of Alberta}{Edmonton, AB}{B.Sc. Computer Science}{2006 - April 2011}
-	\begin{itemize}
-		\resitem{GPA....}
-	\end{itemize}
+	\ressubheading{University of Alberta}{Edmonton, AB}{B.Sc. Computer Science}{2006 - 2011}
+	\ifdefined\longresume
+		\begin{itemize}
+			\resitem{GPA: \textbf{3.6/4.0}}
+		\end{itemize}
+	\fi
 \end{itemize}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\resheading{Skills}
+\resheading{Frameworks and Languages}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{itemize}
-\item
-	Programming and Markup Languages
-	\begin{itemize}
-		\resitem{{\bf Expert:} CSS, HTML}
-		\resitem{{\bf Intermediate:} Java, \LaTeX, Python}
-	\end{itemize}
-
-\item
-	Software
-	\begin{itemize}
-		\resitem{{\bf Expert:} MS Access, MS Excel, MS Word}
-		\resitem{{\bf Intermediate:} Maple, MATLAB}
-	\end{itemize}
-
-
-\item
-	Other
-	\begin{itemize}
-		\resitem{People person, enjoys being challenged, hardworking, smells nice}
-	\end{itemize}
-\end{itemize}
 
 \end{document}
