@@ -57,7 +57,7 @@
 \newcommand{\ressubheading}[4]{
 \begin{tabular*}{6.5in}{l@{\cftdotfill{\cftsecdotsep}\extracolsep{\fill}}r}
 		\textbf{#1} & #2 \\
-		\textit{#3} & #4 \\
+		\textit{#3} & \textit{#4} \\
 \end{tabular*}\vspace{-6pt}}
 \newcommand{\ressubheadinglong}[8]{
 \begin{tabular*}{6.5in}{l@{\cftdotfill{\cftsecdotsep}\extracolsep{\fill}}r}
@@ -65,6 +65,10 @@
 		\textit{#3} & #4 \\
 		\textit{#5} & #6 \\
 		\textit{#7} & #8 \\
+\end{tabular*}\vspace{-6pt}}
+\newcommand{\ressubsubheading}[2]{
+\begin{tabular*}{6.5in}{l@{\cftdotfill{\cftsecdotsep}\extracolsep{\fill}}r}
+	\textit{#1} & \textit{#2} \\
 \end{tabular*}\vspace{-6pt}}
 %-----------------------------------------------------------
 
@@ -85,7 +89,7 @@ Waterloo, Ontario & github.com/godares79 \\
 \resheading{Objective}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
   \begin{center}
-	  \parbox{6.762in}{Experienced software developer seeking position in a fast-paced and challenging environment. Thrives in ambiguity. Proven tech lead in both Eng and Eng Productivity roles. (Maybe 1 or 2 more sentences).}
+	  \parbox{6.762in}{Experienced software developer seeking position in a fast-paced and challenging environment. Thrives in ambiguity. Proven tech lead. Significant experience in both Eng and Eng Productivity roles. Strong technical abilities and systems design experience. (Maybe 1 more sentence).}
   \end{center}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -94,11 +98,17 @@ Waterloo, Ontario & github.com/godares79 \\
 
 \begin{itemize}[leftmargin=*]
 \item[]
-	\ressubheadinglong{Google}{USA/Japan/Canada}{Software Engineer - Google Cloud}{Jan 2022 - Apr 2023}{Software Engineer - Android Platform}{Mar 2020 - Jan 2022}{Software Engineer, Tools and Infrastructure - Google Maps}{Jan 2014 - Mar 2020}
+	\ressubheading{Google}{USA/Japan/Canada}{Software Engineer - Google Cloud}{Jan 2022 - Apr 2023}
 	\begin{itemize}
-		\resitem{Created Terraform and Kubernetes configurations, release pipeline, and probers for Multi-Single Tenant GKE clusters.}
-		\resitem{Drove decision to migrate unreleased Cloud product from GCP VMs to GKE, reducing work required for release by several eng months.}
+		\resitem{Designed and created Terraform and Kubernetes configurations, release pipeline, and probers for Multi-Single Tenant GKE clusters.}
+		\resitem{Drove decision to migrate unreleased Cloud product from GCP VMs to GKE, reducing the work required for the eventual public release by several eng months.}
+	\end{itemize}
+	\ressubsubheading{Software Engineer - Android Platform}{Mar 2020 - Jan 2022}
+	\begin{itemize}
 		\resitem{Talk about the new config and migration to reduce complexity and LOCs of Android Platform tests}
+	\end{itemize}
+	\ressubsubheading{Software Engineer, Tools and Infrastructure - Google Maps}{Jan 2014 - Mar 2020}
+	\begin{itemize}
 		\resitem{Talk about the Maps presubmit/postsubmit/flakiness/test complexity reduction work}
 		\resitem{Talk about the Maps build velocity work}
 		\resitem{Talk about the Android Auto test suite}
