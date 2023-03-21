@@ -6,3 +6,6 @@ long:
 short:
 	pdflatex -jobname=resume_short "\newcommand{\shortresume}[0]{}\input{resume.tex}"
 
+cover:
+	pdflatex -jobname=cover_letter cover_letter.tex
+
