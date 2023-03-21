@@ -13,6 +13,8 @@
 \usepackage{framed}
 \usepackage{tocloft}
 \usepackage{enumitem}
+\usepackage{hyperref}
+\urlstyle{same}
 
 % The following two lines are needed to fix a MacTex compatibility issue
 % Thanks to Tony Blake for finding this fix!
@@ -70,19 +72,23 @@
 \begin{tabular*}{6.5in}{l@{\cftdotfill{\cftsecdotsep}\extracolsep{\fill}}r}
 	\textit{#1} & \textit{#2} \\
 \end{tabular*}\vspace{-6pt}}
+\newcommand\rurl[1]{%
+	\href{http://www.#1}{\nolinkurl{#1}}%
+}
 %-----------------------------------------------------------
 
 
 \begin{document}
 
 \begin{tabular*}{7in}{l@{\extracolsep{\fill}}r}
-\textbf{\LARGE David Dietrich} & \textbf{March 2023} \\
-Software Developer & david.drich@gmail.com \\
-Waterloo, Ontario & github.com/godares79 \\
+	\textbf{\huge David Dietrich} & \textbf{March 2023} \\
+	Software Developer & david.drich@gmail.com \\
+	Waterloo, Ontario & \rurl{github.com/godares79} \\
+	& \rurl{linkedin.com/in/david-drich}
 \end{tabular*}
 \\
 
-\vspace{15pt}
+\vspace{5pt}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -172,9 +178,9 @@ Waterloo, Ontario & github.com/godares79 \\
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{itemize}[leftmargin=*, itemsep=-5pt]
 \item[]
-	\textbf{Frameworks:} Bazel, Kubernetes, GCP, Terraform, Git, Jenkins, Cloud Build, Protobuf, Puppet
+	\textbf{Frameworks:} Bazel, Kubernetes, GCP, Terraform, Git, Jenkins, Cloud Build, Protobuf, Linux, Git
 \item[]
-	\textbf{Languages:} Python, Java, GCL, Go
+	\textbf{Languages:} Python, Java, GCL, Bash
 \end{itemize}
 
 \begin{tabular*}{6.5in}{l@{\cftdotfill{\cftsecdotsep}\extracolsep{\fill}}r}
