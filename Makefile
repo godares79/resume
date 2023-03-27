@@ -7,5 +7,7 @@ short:
 	pdflatex -jobname=resume_short "\newcommand{\shortresume}[0]{}\input{resume.tex}"
 
 cover:
-	pdflatex -jobname=cover_letter cover_letter.tex
+	# The space after the jobtitle is necessary for formatting reasons.
+	pdflatex -jobname=cover_letter \
+		"\newcommand{\jobtitle}{$(TITLE) }\newcommand{\company}{$(COMPANY)}\newcommand{\organization}{$(ORGANIZATION)}\input{cover_letter.tex}"
 
